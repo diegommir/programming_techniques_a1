@@ -11,9 +11,14 @@
 function translate($text)
 {
     $result = trim($text);
-    $result = preg_replace(" [aeiouAEIOU]", " ", $result);
-    $result = preg_replace(" ", "oiy===", $result);
-    $result .= "oiy";
+    if (empty($result)) {
+        return "";
+    }
+
+    $result = preg_replace("/^[aeiouAEIOU]/", "", $result);
+    $result = preg_replace("/ [aeiouAEIOU]/", " ", $result);
+    $result = preg_replace("/ /", "oiy===", $result);
+    $result = $result . "oiy";
 
     return $result;
 }
