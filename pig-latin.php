@@ -72,6 +72,11 @@ $translated_text = translate($text_to_translate);
                 margin: 0px 10px;
                 padding: 10px 50px;
             }
+
+            a {
+                color: #333;
+                padding: 10px;
+            }
         </style>
     </head>
     <body>
@@ -87,5 +92,7 @@ $translated_text = translate($text_to_translate);
             </div>
             <input id="btnTranslate" type="submit" value="Translate"/>
         </form>
+        <br/>
+        <a href="https://github.com/diegommir/programming_techniques_a1" target="github">Github Repository</a>
     </body>
 </html>
